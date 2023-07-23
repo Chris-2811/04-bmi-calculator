@@ -8,8 +8,6 @@
   src: url('/assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
 }
 
-
-
 :root {
   --blue: #345ff6;
   --gunmetal: #253347;
@@ -141,6 +139,7 @@ input[type='radio'] {
   margin-right: 18px;
   width: 31px;
   height: 31px;
+  cursor: pointer;
 }
 
 .units .form-control {
@@ -193,9 +192,13 @@ input[type='radio'] {
   margin-bottom: 8px;
 }
 
-.imperial .container-flex{
+.imperial .container-flex {
   display: flex;
   gap: 24px;
+}
+
+.header .metric .form-control  {
+  width: 100%;
 }
 
 .imperial {
@@ -220,6 +223,7 @@ input[type='radio'] {
   display: flex;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
 .imperial .form-control .input-container input {
@@ -345,11 +349,11 @@ input[type='radio'] {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 690px;
+    max-width: 1000px;
   }
 
   .header {
-    padding: 32px 43px 72px 43px;
+    padding: 32px 43px 72px 39px;
   }
 
   .header .calculator {
@@ -384,25 +388,37 @@ input[type='radio'] {
   .header .metric {
     display: flex;
     justify-content: space-between;
+    gap: 24px;
   }
 
-  .header .metric .form-control input  {
+
+ 
+
+  .header .imperiall .form-control {
+    width: 100%;
+  }
+
+  .header .metric .form-control input {
     margin-top: 8px;
   }
 
   .explanation {
     display: flex;
     align-items: center;
-    padding-inline: 42px;
+    padding-inline: 39px 43px;
   }
 
   .explanation .image {
-    min-width: 360px;
+    min-width: 402px;
     max-width: 564px;
-    width: 45%;
-    height: 100%;
+    height: 411px;
     align-self: flex-end;
     transform: translateX(-75px);
+  }
+
+  .explanation img {
+    width: 100%;
+    height: 100%;
   }
 
   .explanation .content {
@@ -413,6 +429,11 @@ input[type='radio'] {
   }
 
   /* Habits */
+
+  .positive-habits {
+    padding-inline: 39px 43px;
+    border-radius: 16px;
+  }
 
   .positive-habits > div {
     display: flex;
@@ -427,7 +448,7 @@ input[type='radio'] {
   /* Limitations */
 
   .limitations {
-    padding: 0;
+    padding: 39px 43px;
   }
 
   .limitations-content {
@@ -450,6 +471,10 @@ input[type='radio'] {
 }
 
 @media (min-width: 1440px) {
+  .container {
+    max-width: 1392px;
+  }
+
   h1 {
     font-size: 64px;
   }
@@ -458,14 +483,9 @@ input[type='radio'] {
     font-size: 48px;
   }
 
-  .container {
-    margin: 0 auto;
-    max-width: 1160px;
-  }
-
   .header {
     padding-block: 75px 220px;
-    padding-inline: 0;
+    padding-inline: 140px;
   }
 
   .header .logo {
@@ -505,17 +525,17 @@ input[type='radio'] {
   .explanation {
     justify-content: space-between;
     gap: 131px;
-    padding-inline: 0;
-    max-width: 1160px;
-    margin: 0 auto;
+    padding-inline: 140px;
     position: relative;
   }
 
   .explanation .curve-left {
     display: block;
     position: absolute;
-    right: 0;
-    top: -35px;
+    width: 85px;
+    height: 200px;
+    top: -37px;
+    right: 167px;
   }
 
   .explanation .content {
@@ -531,7 +551,8 @@ input[type='radio'] {
   .positive-habits {
     flex-direction: row;
     margin-bottom: 120px;
-    padding: 0;
+    padding: 76px 116px 96px 116px;
+    padding-block: 76px 96px;
     max-width: 1392px;
     margin: 96px auto 120px auto;
     border-radius: 35px;
@@ -545,15 +566,18 @@ input[type='radio'] {
   .limitations {
     text-align: left;
     position: relative;
-    max-width: 1160px;
     margin: 70px 0;
-    padding-inline: 0;
+    padding-block: 0;
+    padding-inline: 140px;
   }
 
   .limitations .curve {
     display: block;
     position: absolute;
+    width: 94px;
+    height: 122px;
     top: 251px;
+    left: 165px;
   }
 
   .limitations-content {
@@ -564,31 +588,38 @@ input[type='radio'] {
   }
 
   .limitations .cards {
+    margin-top: 80px;
+    justify-content: flex-end;
     gap: 24px;
-    margin: 0 auto;
   }
 
   .card {
-    height: auto;
     max-width: 365px;
   }
 
   .card.gender {
-    transform: translate(600px, -236px);
+    position: absolute;
+    top: 0;
+    left: 796px;
   }
 
-  .card.age,
+  .card.age {
+    height: 184px;
+    z-index: 1;
+  }
+
   .card.muscle {
-    max-height: 184px;
-    margin-top: 30px;
+    height: 184px;
+    z-index: 1;
+  }
+
+  .card.pregnancy {
+    transform: translate(-231px);
+    z-index: 1;
   }
 
   .card.race {
-    margin-left: 8px;
-  }
-
-  .card.race,
-  .card.pregnancy {
-    transform: translateY(-16px);
+    transform: translate(-199px);
+    z-index: 1;
   }
 }

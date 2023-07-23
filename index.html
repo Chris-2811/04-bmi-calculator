@@ -31,11 +31,11 @@
               <h3>Enter your details below</h3>
               <div class="units">
                 <div class="form-control">
-                  <input type="radio" name="input" value="metric" checked/>
+                  <input type="radio" name="input" value="metric" id="metric" class="radio active" checked/>
                   <label for="metric">Metric</label>
                 </div>
                 <div class="form-control">
-                  <input type="radio" name="input" value="imperial" />
+                  <input type="radio" name="input" value="imperial" id="imperial" class="radio" />
                   <label for="imperial">Imperial</label>
                 </div>
               </div>
@@ -44,14 +44,14 @@
                   <div class="form-control">
                     <label for="height">Height</label>
                     <div class="input-container">
-                      <input type="text" id="height" />
-                      <span class="unit-height" id="unit-height">cm</span>
+                      <input type="text" id="height" placeholder="0"/>
+                      <span class="unit-height" id="unit-height" >cm</span>
                     </div>
                   </div>
                   <div class="form-control">
                     <label for="weight">Weight</label>
                     <div class="input-container">
-                      <input type="text"  id="weight" />
+                      <input type="text"  id="weight" placeholder="0"/>
                       <span class="unit-weight" id="unit-weight">kg</span>
                     </div>
                   </div>
@@ -62,11 +62,11 @@
                     <label for="height">Height</label>
                     <div class="container-flex">
                       <div class="input-container">
-                        <input type="text" id="feet" class="feet">
+                        <input type="text" id="feet" class="feet" placeholder="0">
                         <small>ft</small>
                       </div>
                       <div class="input-container">
-                        <input type="text" id="inch" class="inch">
+                        <input type="text" id="inch" class="inch" placeholder="0">
                         <small>in</small>
                       </div>
                     </div>
@@ -75,11 +75,11 @@
                     <label for="weight">Weight</label>
                     <div class="container-flex">
                       <div class="input-container">
-                        <input type="text" id="st" class="st">
+                        <input type="text" id="st" class="st" placeholder="0">
                         <small>st</small>
                       </div>
                       <div class="input-container">
-                        <input type="text" id="lbs" class="lbs">
+                        <input type="text" id="lbs" class="lbs" placeholder="0">
                         <small>lbs</small>
                       </div>
                     </div>
@@ -95,7 +95,7 @@
                   <div class="result" id="result">23.4</div>
                 </div>
                 <div class="result-text">
-                  <p>Your BMI suggests you're a <span id="classification"></span>. Your ideal weight is between <span id="min-weight"></span>kgs - <span id="max-weight"></span>kgs</p>
+                  <p>Your BMI suggests you're  <span id="classification"></span>. Your ideal weight is between <span id="min-weight"></span> - <span id="max-weight"></span></p>
                 </div>
               </div>
               <div class="welcome-text" id="welcome">
@@ -162,16 +162,16 @@
         </section>
         <!-- Section Limitations -->
         <section class="limitations">
-          <img src="assets/images/pattern-curved-line-right.svg" alt="curve" class="curve">
-          <div class="limitations-content">
-            <h2>Limitations of BMI</h2>
-            <p>
-              Although BMI is often a practical indicator of healthy weight, it is
-              not suited for every person. Specific groups should carefully consider
-              their BMI outcomes, and in certain cases, the measurement may not be
-              beneficial to use.
-            </p>
-          </div>
+            <img src="assets/images/pattern-curved-line-right.svg" alt="curve" class="curve">
+            <div class="limitations-content">
+              <h2>Limitations of BMI</h2>
+              <p>
+                Although BMI is often a practical indicator of healthy weight, it is
+                not suited for every person. Specific groups should carefully consider
+                their BMI outcomes, and in certain cases, the measurement may not be
+                beneficial to use.
+              </p>
+            </div>
           <div class="cards">
             <div class="card gender">
               <div class="card-heading">
