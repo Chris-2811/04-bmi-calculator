@@ -586,6 +586,10 @@ input[type='radio'].active::after {
 
   .form .infos .form-control:first-of-type {
     margin: 0;
+  }
+
+  .form .infos .imperial .form-control:first-of-type {
+    margin: 0;
     margin-bottom: 24px;
   }
 
