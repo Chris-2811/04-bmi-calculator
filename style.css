@@ -327,7 +327,7 @@ input[type='radio'].active::after {
 }
 
 .explanation h2 {
-  margin-block: 48px 32px;
+  margin-block: 48px 35px;
 }
 
 /* Habits */
@@ -599,7 +599,7 @@ input[type='radio'].active::after {
 
   .header .calculator {
     width: 564px;
-    margin-top: 107px;
+    margin-top: 106px;
   }
 
   .explanation {
@@ -636,12 +636,14 @@ input[type='radio'].active::after {
     max-width: 1392px;
     margin: 96px auto 120px auto;
     border-radius: 35px;
+    gap: 32px;
   }
 
   .positive-habits > div {
     flex-direction: column;
     align-items: flex-start;
     gap: 45px;
+    width: 365px;
   }
 
   .limitations {
