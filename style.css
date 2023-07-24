@@ -224,15 +224,12 @@ input[type='radio'].active::after {
   letter-spacing: -1.2px;
 }
 
-.form .infos .form-control:first-of-type {
-  margin-bottom: 16px;
-}
-
 .metric {
   display: block;
 }
 
-.metric .form-control label {
+.form .metric .form-control label {
+  display: block;
   margin-bottom: 8px;
   color: var(--dark-electric-blue);
 }
@@ -427,6 +424,10 @@ input[type='radio'].active::after {
     text-align: left;
   }
 
+  .header .form {
+    margin-bottom: 32px;
+  }
+
   .header .container-result .result {
     font-size: 64px;
     margin: 0;
@@ -443,10 +444,6 @@ input[type='radio'].active::after {
 
   .header .imperiall .form-control {
     width: 100%;
-  }
-
-  .header .metric .form-control input {
-    margin-top: 8px;
   }
 
   .explanation {
@@ -540,7 +537,7 @@ input[type='radio'].active::after {
   .header .logo {
     width: 64px;
     margin: 0;
-    margin-bottom: 127px;
+    margin-bottom: 131px;
   }
 
   .header .content {
@@ -580,7 +577,6 @@ input[type='radio'].active::after {
   .container-result .result-heading {
     font-size: 16px;
   }
-
 
   .form .infos .form-control:first-of-type {
     margin: 0;
