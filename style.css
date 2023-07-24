@@ -126,6 +126,11 @@ body::before {
   gap: 24px;
   width: 100%;
   max-width: 280px;
+  font-weight: 600;
+}
+
+.calculator .units .form-control label {
+  font-weight: 600;
 }
 
 .form {
@@ -140,7 +145,7 @@ input[type='radio'] {
   width: 31px;
   height: 31px;
   cursor: pointer;
-  border: 1px solid #D8E2E7;
+  border: 1px solid #d8e2e7;
   border-radius: 50%;
   appearance: none;
 }
@@ -172,7 +177,6 @@ input[type='radio'].active::after {
   transform: translate(-50%, -50%);
 }
 
-
 .units .form-control {
   width: 100%;
   display: flex;
@@ -200,6 +204,11 @@ input[type='radio'].active::after {
   position: relative;
 }
 
+.form .infos .input-container input::placeholder {
+  color: var(--dark-electric-blue);
+  opacity: 0.25;
+}
+
 .form .unit-height,
 .form .unit-weight {
   color: var(--blue);
@@ -209,6 +218,7 @@ input[type='radio'].active::after {
   transform: translateY(-50%);
   right: 24px;
   font-size: 24px;
+  letter-spacing: -1.2px;
 }
 
 .form .infos .form-control:first-of-type {
@@ -221,6 +231,7 @@ input[type='radio'].active::after {
 
 .metric .form-control label {
   margin-bottom: 8px;
+  color: var(--dark-electric-blue);
 }
 
 .imperial .container-flex {
@@ -228,7 +239,7 @@ input[type='radio'].active::after {
   gap: 24px;
 }
 
-.header .metric .form-control  {
+.header .metric .form-control {
   width: 100%;
 }
 
@@ -239,6 +250,7 @@ input[type='radio'].active::after {
 .form .imperial .form-control label {
   display: block;
   margin-bottom: 8px;
+  color: var(--dark-electric-blue);
 }
 
 .imperial .form-control small {
@@ -422,9 +434,6 @@ input[type='radio'].active::after {
     gap: 24px;
   }
 
-
- 
-
   .header .imperiall .form-control {
     width: 100%;
   }
@@ -506,8 +515,10 @@ input[type='radio'].active::after {
     max-width: 1392px;
   }
 
-  h1 {
+  .content h1 {
     font-size: 64px;
+    letter-spacing: -3.2px;
+    margin-block: 35px;
   }
 
   h2 {
@@ -515,8 +526,8 @@ input[type='radio'].active::after {
   }
 
   .header {
-    padding-block: 75px 151px;
-    padding-inline: 140px;
+    padding-block: 75px 172px;
+    padding-inline: 116px;
   }
 
   .header .logo {
@@ -535,8 +546,11 @@ input[type='radio'].active::after {
     top: 0;
     left: 24px;
     width: 60%;
-    height: 773px;
-    background: var(--gradient-1, linear-gradient(315deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%));
+    height: 737px;
+    background: var(
+      --gradient-1,
+      linear-gradient(315deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%)
+    );
 
     border-radius: 35px;
     z-index: -1;
@@ -552,10 +566,29 @@ input[type='radio'].active::after {
     margin: 0;
   }
 
+  .header .form {
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .form .infos .form-control:first-of-type {
+    margin: 0;
+  }
+
+  #welcome {
+    font-size: 14px;
+  }
+
+  .header .calculator {
+    width: 564px;
+  }
+
+
+
   .explanation {
     justify-content: space-between;
     gap: 131px;
-    padding-inline: 140px;
+    padding-inline: 116px;
     position: relative;
     margin: 0;
   }
@@ -583,7 +616,6 @@ input[type='radio'].active::after {
     flex-direction: row;
     margin-bottom: 120px;
     padding: 72px 116px 96px 116px;
-    padding-block: 76px 96px;
     max-width: 1392px;
     margin: 96px auto 120px auto;
     border-radius: 35px;
@@ -592,6 +624,7 @@ input[type='radio'].active::after {
   .positive-habits > div {
     flex-direction: column;
     align-items: flex-start;
+    gap: 45px;
   }
 
   .limitations {
@@ -599,7 +632,7 @@ input[type='radio'].active::after {
     position: relative;
     margin: 70px 0;
     padding-block: 0;
-    padding-inline: 140px;
+    padding-inline: 116px;
   }
 
   .limitations .curve {
@@ -622,6 +655,7 @@ input[type='radio'].active::after {
     margin-top: 80px;
     justify-content: flex-end;
     gap: 24px;
+    padding-left: 32px;
   }
 
   .card {
@@ -632,6 +666,7 @@ input[type='radio'].active::after {
     position: absolute;
     top: 0;
     left: 796px;
+    height: 232px;
   }
 
   .card.age {
@@ -645,12 +680,14 @@ input[type='radio'].active::after {
   }
 
   .card.pregnancy {
-    transform: translate(-231px);
+    transform: translate(-220px);
     z-index: 1;
+    height: 232px;
   }
 
   .card.race {
     transform: translate(-199px);
     z-index: 1;
+    height: 232px;
   }
 }
