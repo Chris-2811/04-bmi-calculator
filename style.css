@@ -143,7 +143,7 @@ body::before {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 23px;
   margin-bottom: 24px;
 }
 
@@ -172,8 +172,8 @@ input[type='radio'].active {
 
 input[type='radio'].active::after {
   content: '';
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   background-color: var(--blue);
   opacity: 1;
   border-radius: 50%;
@@ -215,6 +215,7 @@ input[type='radio'].active::after {
 .form .infos .input-container input::placeholder {
   color: var(--dark-electric-blue);
   opacity: 0.25;
+  font-weight: 600;
 }
 
 .form .unit-height,
@@ -457,7 +458,6 @@ input[type='radio'].active::after {
     padding-inline: 39px 43px;
   }
 
-
   .explanation .image {
     min-width: 361px;
     max-width: 564px;
@@ -469,7 +469,6 @@ input[type='radio'].active::after {
   .explanation img {
     width: 100%;
     height: 100%;
-    
   }
 
   .explanation .content {
@@ -625,9 +624,9 @@ input[type='radio'].active::after {
     margin-top: 85px;
   }
 
-.explanation h2 {
-  margin-top: 53px;
-}
+  .explanation h2 {
+    margin-top: 56px;
+  }
 
   .explanation .image {
     transform: translate(0);
