@@ -283,6 +283,7 @@ input[type='radio'].active::after {
 .container-result .welcome-text h3 {
   color: #fff;
   margin-bottom: 16px;
+  line-height: normal;
 }
 
 .container-result > * {
@@ -427,6 +428,8 @@ input[type='radio'].active::after {
     font-size: 64px;
     margin: 0;
     margin-top: 8px;
+    font-weight: 600;
+    line-height: 1.1;
   }
 
   .header .metric {
@@ -571,6 +574,10 @@ input[type='radio'].active::after {
     gap: 32px;
     margin-bottom: 32px;
   }
+  .container-result .result-heading {
+    font-size: 16px;
+  }
+
 
   .form .infos .form-control:first-of-type {
     margin: 0;
