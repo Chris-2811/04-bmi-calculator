@@ -71,6 +71,12 @@ img {
   max-width: 100%;
 }
 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .container {
   max-width: 686px;
   margin: 0 auto;
@@ -127,7 +133,6 @@ body::before {
   align-items: center;
   gap: 24px;
   width: 100%;
-  max-width: 280px;
   font-weight: 600;
 }
 
@@ -550,6 +555,7 @@ input[type='radio'].active::after {
     top: 0;
     left: 24px;
     width: 60%;
+    min-width: 978px;
     height: 737px;
     background: var(
       --gradient-1,
@@ -580,6 +586,7 @@ input[type='radio'].active::after {
 
   .form .infos .form-control:first-of-type {
     margin: 0;
+    margin-bottom: 24px;
   }
 
   #welcome {
@@ -671,7 +678,8 @@ input[type='radio'].active::after {
   .card.gender {
     position: absolute;
     top: 0;
-    left: 796px;
+    right: 215px;
+    /* left: 796px; */
     height: 232px;
   }
 
@@ -683,10 +691,11 @@ input[type='radio'].active::after {
   .card.muscle {
     height: 184px;
     z-index: 1;
+    margin-left: 8px;
   }
 
   .card.pregnancy {
-    transform: translate(-220px);
+    transform: translateX(-206px);
     z-index: 1;
     height: 232px;
   }
