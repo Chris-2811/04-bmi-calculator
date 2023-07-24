@@ -327,7 +327,7 @@ input[type='radio'].active::after {
 }
 
 .explanation h2 {
-  margin-block: 48px 35px;
+  margin-block: 48px 32px;
 }
 
 /* Habits */
@@ -457,8 +457,9 @@ input[type='radio'].active::after {
     padding-inline: 39px 43px;
   }
 
+
   .explanation .image {
-    min-width: 402px;
+    min-width: 361px;
     max-width: 564px;
     height: 411px;
     align-self: flex-end;
@@ -468,10 +469,11 @@ input[type='radio'].active::after {
   .explanation img {
     width: 100%;
     height: 100%;
+    
   }
 
   .explanation .content {
-    width: 55%;
+    width: 50%;
     min-width: 331px;
     max-width: 465px;
     justify-self: center;
@@ -615,13 +617,17 @@ input[type='radio'].active::after {
     position: absolute;
     width: 85px;
     height: 200px;
-    top: -37px;
-    right: 167px;
+    top: -40px;
+    right: 143px;
   }
 
   .explanation .content {
     margin-top: 85px;
   }
+
+.explanation h2 {
+  margin-top: 53px;
+}
 
   .explanation .image {
     transform: translate(0);
