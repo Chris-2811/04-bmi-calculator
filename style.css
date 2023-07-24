@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'inter-regular';
-  src: url('/assets/fonts/static/Inter-Regular.ttf') format('truetype');
+  src: url('assets/fonts/static/Inter-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'inter-semibold';
-  src: url('/assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+  src: url('assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
 }
 
 :root {
