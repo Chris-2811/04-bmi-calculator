@@ -112,7 +112,7 @@ body::before {
 
 .calculator {
   background: #fff;
-  margin-top: 48px;
+  margin-top: 92px;
   padding: 24px;
   border-radius: 16px;
   box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
@@ -140,7 +140,38 @@ input[type='radio'] {
   width: 31px;
   height: 31px;
   cursor: pointer;
+  border: 1px solid #D8E2E7;
+  border-radius: 50%;
+  appearance: none;
 }
+
+input[type='radio']:not(.active):hover {
+  border: 1px solid var(--blue);
+}
+
+input[type='radio'].active {
+  appearance: none;
+  height: 31px;
+  width: 31px;
+  border-radius: 50%;
+  background-color: hsla(227, 92%, 58%, 0.15);
+  position: relative;
+}
+
+input[type='radio'].active::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: var(--blue);
+  opacity: 1;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 .units .form-control {
   width: 100%;
@@ -484,11 +515,12 @@ input[type='radio'] {
   }
 
   .header {
-    padding-block: 75px 220px;
+    padding-block: 75px 151px;
     padding-inline: 140px;
   }
 
   .header .logo {
+    width: 64px;
     margin: 0;
     margin-bottom: 127px;
   }
@@ -504,10 +536,8 @@ input[type='radio'] {
     left: 24px;
     width: 60%;
     height: 773px;
-    background: var(
-      --gradient-1,
-      linear-gradient(315deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%)
-    );
+    background: var(--gradient-1, linear-gradient(315deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%));
+
     border-radius: 35px;
     z-index: -1;
   }
@@ -527,6 +557,7 @@ input[type='radio'] {
     gap: 131px;
     padding-inline: 140px;
     position: relative;
+    margin: 0;
   }
 
   .explanation .curve-left {
@@ -551,7 +582,7 @@ input[type='radio'] {
   .positive-habits {
     flex-direction: row;
     margin-bottom: 120px;
-    padding: 76px 116px 96px 116px;
+    padding: 72px 116px 96px 116px;
     padding-block: 76px 96px;
     max-width: 1392px;
     margin: 96px auto 120px auto;
@@ -577,7 +608,7 @@ input[type='radio'] {
     width: 94px;
     height: 122px;
     top: 251px;
-    left: 165px;
+    left: 281px;
   }
 
   .limitations-content {
