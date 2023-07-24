@@ -112,7 +112,7 @@ body::before {
 
 .calculator {
   background: #fff;
-  margin-top: 92px;
+  margin-top: 48px;
   padding: 24px;
   border-radius: 16px;
   box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
@@ -401,6 +401,7 @@ input[type='radio'].active::after {
 
   .header .calculator {
     padding: 32px;
+    margin-top: 40px;
   }
 
   .header .container-result {
@@ -581,9 +582,8 @@ input[type='radio'].active::after {
 
   .header .calculator {
     width: 564px;
+    margin-top: 107px;
   }
-
-
 
   .explanation {
     justify-content: space-between;
