@@ -52,12 +52,14 @@ h3 {
   font-size: 24px;
   letter-spacing: -1.2px;
   font-weight: 600;
+  line-height: normal;
 }
 
 h4 {
   color: var(--gunmetal);
   font-size: 20px;
   letter-spacing: -1px;
+  line-height: normal;
 }
 
 p {
@@ -193,6 +195,7 @@ input[type='radio'].active::after {
   padding: 20px 24px;
   border-radius: 12px;
   border: 1px solid #d8e2e7;
+  font-size: 24px;
 }
 
 .form .infos input:focus {
