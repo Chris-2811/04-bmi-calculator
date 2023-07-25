@@ -112,6 +112,10 @@ body::before {
   margin: 0 auto;
 }
 
+.header .container {
+  position: relative;
+}
+
 .bmi {
   display: none;
   align-items: center;
@@ -125,6 +129,9 @@ body::before {
   border-radius: 16px;
   box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
   text-align: left;
+  position: absolute;
+  width: 100%;
+  margin-bottom: 72px;
 }
 
 .calculator .units {
@@ -144,7 +151,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 23px;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 input[type='radio'] {
@@ -247,6 +254,7 @@ input[type='radio'].active::after {
 
 .header .metric .form-control {
   width: 100%;
+  margin-bottom: 16px;
 }
 
 .imperial {
@@ -286,6 +294,13 @@ input[type='radio'].active::after {
   border-radius: 16px;
 }
 
+.container-result .bmi {
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+
+
 .container-result .welcome-text h3 {
   color: #fff;
   margin-bottom: 16px;
@@ -298,16 +313,28 @@ input[type='radio'].active::after {
 
 .container-result p {
   color: #fff;
+  font-size: 14px;
+}
+
+.container-result #min-weight, 
+.container-result #max-weight {
+  color: #fff;
+  font-weight: 700;
 }
 
 .container-result .result {
   font-size: 48px;
   line-height: 1.1;
   margin-block: 8px 24px;
+  text-align: left;
 }
 
 .container-result .result-heading {
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.container-result .result-heading .result {
+  font-size: 48px;
 }
 
 .container-result > p {
@@ -321,6 +348,7 @@ input[type='radio'].active::after {
   margin: 0 auto;
   padding-inline: 24px;
   margin-bottom: 127.5px;
+  margin-top: 657px;
 }
 
 .explanation .curve-left {
@@ -363,7 +391,7 @@ input[type='radio'].active::after {
 /* Limitations */
 
 .limitations {
-  padding-inline: 19px 29px;
+  padding-inline: 24px;
   margin-bottom: 96px;
 }
 
@@ -430,8 +458,12 @@ input[type='radio'].active::after {
     text-align: left;
   }
 
+  .header .container-result .result-text p {
+    max-width: 276px;
+  }
+
   .header .form {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
 
   .header .container-result .result {
@@ -442,11 +474,20 @@ input[type='radio'].active::after {
     line-height: 1.1;
   }
 
+  .header .container-result .bmi {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
   .header .metric {
     display: flex;
     justify-content: space-between;
     gap: 24px;
   }
+
+  
 
   .header .imperiall .form-control {
     width: 100%;
@@ -456,6 +497,7 @@ input[type='radio'].active::after {
     display: flex;
     align-items: center;
     padding-inline: 39px 43px;
+    margin-top: 531px;
   }
 
   .explanation .image {
@@ -536,7 +578,7 @@ input[type='radio'].active::after {
   }
 
   .header {
-    padding-block: 75px 172px;
+    padding-block: 75px 0;
     padding-inline: 116px;
   }
 
@@ -579,7 +621,7 @@ input[type='radio'].active::after {
 
   .header .form {
     gap: 32px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
   .container-result .result-heading {
     font-size: 16px;
@@ -601,6 +643,9 @@ input[type='radio'].active::after {
   .header .calculator {
     width: 564px;
     margin-top: 106px;
+    top: 92px;
+    left: 51.23%;
+    margin: 0;
   }
 
   .explanation {
@@ -609,6 +654,7 @@ input[type='radio'].active::after {
     padding-inline: 116px;
     position: relative;
     margin: 0;
+    margin-top: 265px;
   }
 
   .explanation .curve-left {
@@ -616,7 +662,7 @@ input[type='radio'].active::after {
     position: absolute;
     width: 85px;
     height: 200px;
-    top: -40px;
+    top: -32px;
     right: 143px;
   }
 
