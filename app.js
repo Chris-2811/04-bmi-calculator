@@ -70,6 +70,7 @@ function calculateBMI(e) {
     ).toFixed(1);
     console.log(bmi);
 
+    resultEl.innerText = bmi
     const minOptimalWeightPounds =
       (18.5 * (heightInInches * heightInInches)) / 703;
     const maxOptimalWeightPounds =
@@ -109,7 +110,13 @@ function limitLength() {
   if (heightEl.value.length > 3 || weightEl.value.length > 3) {
     heightEl.value = heightEl.value.slice(0, 3);
     weightEl.value = weightEl.value.slice(0, 3);
-  }
+  } else if (feetEl.value.length > 1) {
+    feetEl.value = feetEl.value.slice(0, 1)
+  } else if (inchEl.value.length > 2 || lbsEl.value.length > 2 || stEl.value.length > 2) {
+    inchEl.value = inchEl.value.slice(0, 2)
+    lbsEl.value = lbsEl.value.slice(0, 2)
+    stEl.value = stEl.value.slice(0, 2)
+    }
 }
 
 // Add Eventlistener
@@ -129,6 +136,10 @@ form.addEventListener('keydown', (e) => {
 // Limit input
 heightEl.addEventListener('input', limitLength);
 weightEl.addEventListener('input', limitLength);
+feetEl.addEventListener('input', limitLength)
+inchEl.addEventListener('input', limitLength)
+lbsEl.addEventListener('input', limitLength)
+stEl.addEventListener('input', limitLength)
 
 // Change radio button
 const radioButtons = document.querySelectorAll('input[type="radio"]');
@@ -143,7 +154,7 @@ radioButtons.forEach((btn) => {
       console.log(metricBtn);
       metricBtn.classList.remove('active');
     } else {
-      document.querySelector('.metric').style.display = 'flex';
+      document.querySelector('.metric').style.display = window.innerWidth < 768 ? 'block' : 'flex';
       document.querySelector('.imperial').style.display = 'none';
       imperialBtn.classList.remove('active');
       e.target.classList.add('active');
@@ -151,4 +162,11 @@ radioButtons.forEach((btn) => {
   });
 });
 
-//
+// Window rezise event
+window.addEventListener('resize', e=> {
+  if(window.innerWidth < 768) {
+    document.querySelector('.metric').style.display = 'block'
+  } else {
+    document.querySelector('.metric').style.display = 'flex'
+  }
+})

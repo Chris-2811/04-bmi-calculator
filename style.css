@@ -147,6 +147,10 @@ body::before {
   font-weight: 600;
 }
 
+.calculator .imperial .form-control {
+  margin-bottom: 16px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -239,6 +243,14 @@ input[type='radio'].active::after {
 
 .metric {
   display: block;
+}
+
+.metric.flex {
+  display: flex;
+}
+
+.metric.none {
+  display: none;
 }
 
 .form .metric .form-control label {
@@ -487,7 +499,9 @@ input[type='radio'].active::after {
     gap: 24px;
   }
 
-  
+  .metric.flex {
+    display: flex;
+  }
 
   .header .imperiall .form-control {
     width: 100%;
